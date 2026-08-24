@@ -11,9 +11,11 @@ install:
 		gh skill install anthropics/skills frontend-design --dir $$dest -f; \
 	done
 
-## install前に、各エージェントへ反映される差分(SKILL.md本文、frontmatterは除く)を確認する
+## install前に、各エージェントへ反映される差分(SKILL.mdのfrontmatter/本文)を確認する
+## gh skill install が注入する metadata(local-path)とキー順序の違いだけは無視する
 diff:
-	@strip_frontmatter() { awk '/^---$$/{c++; next} c<2{next} !started && $$0==""{next} {started=1; print}'; }; \
+	@extract_frontmatter() { awk '/^---$$/{c++; next} c!=1{next} $$0 ~ /^metadata:/{skip=1; next} skip{if ($$0 ~ /^[ \t]/) next; skip=0} {if ($$0 !~ /^[ \t]/){split($$0,a,":"); key=a[1]} line=$$0; gsub(/^[ \t]+/, "", line); gsub(/\|-$$/, "|", line); if (line=="") next; print key" "line}' | sort -k1,1 -s | sed 's/^[^ ]* //'; }; \
+	extract_body() { awk '/^---$$/{c++; next} c<2{next} !started && $$0==""{next} {started=1; print}'; }; \
 	for dest in $(DESTS); do \
 		echo "=== $$dest ==="; \
 		any=0; \
@@ -25,10 +27,16 @@ diff:
 			if [ ! -f "$$installed" ]; then \
 				echo "  [new] $$name"; any=1; continue; \
 			fi; \
-			d=$$(diff <(strip_frontmatter < "$$local") <(strip_frontmatter < "$$installed")); \
-			if [ -n "$$d" ]; then \
-				echo "  [changed] $$name"; \
-				echo "$$d" | sed 's/^/    /'; \
+			fm_diff=$$(diff <(extract_frontmatter < "$$local") <(extract_frontmatter < "$$installed")); \
+			body_diff=$$(diff <(extract_body < "$$local") <(extract_body < "$$installed")); \
+			if [ -n "$$fm_diff" ]; then \
+				echo "  [changed:frontmatter] $$name"; \
+				echo "$$fm_diff" | sed 's/^/    /'; \
+				any=1; \
+			fi; \
+			if [ -n "$$body_diff" ]; then \
+				echo "  [changed:body] $$name"; \
+				echo "$$body_diff" | sed 's/^/    /'; \
 				any=1; \
 			fi; \
 		done; \
