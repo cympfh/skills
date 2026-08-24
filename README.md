@@ -1,81 +1,39 @@
 # skills
 
-Agent Skills。配置は `skills/*/SKILL.md`（[Agent Skills 仕様](https://agentskills.io/specification)）。
+Agent Skills.
+配置は `skills/*/SKILL.md`（[Agent Skills 仕様](https://agentskills.io/specification)）.
 
-## インストール
+## Install
 
-このマシン:
+[GitHub CLI](https://cli.github.com/) **v2.90.0 以降** が必要
 
-```bash
-make install
-```
-
-`gh skill install` で `~/.claude/skills/`、`~/.agents/skills/`、`~/.codex/skills/`、`~/.grok/skills/` にこのリポジトリの全スキルを入れる。`frontend-design` は [anthropics/skills](https://github.com/anthropics/skills) から入れる。
-
----
-
-[GitHub CLI](https://cli.github.com/) **v2.90.0 以降**が必要（`gh skill` は preview）。
+### gh skill install
 
 ```bash
+# とりあえず何があるか見てみる
+gh skill preview cympfh/skills
+
 # 全スキルを Claude Code のユーザースコープへ
 gh skill install cympfh/skills --all --agent claude-code --scope user
 
-# 1つだけ
-gh skill install cympfh/skills check --agent claude-code --scope user
+# todo スキルだけをインストール
+gh skill install cympfh/skills todo
 ```
 
-`--scope` のデフォルトは `project`（カレント git リポジトリ）。全プロジェクトで使うなら `--scope user`。
-
-`--agent` のデフォルトは `github-copilot`。よく使う値:
-
-| `--agent` | ユーザースコープのインストール先 |
-| --- | --- |
-| `claude-code` | `~/.claude/skills/` |
-| `codex` | `~/.codex/skills/` |
-| `grok` | `~/.grok/skills/` |
-| `cursor` | `~/.cursor/skills/` |
-| `universal` | `~/.agents/skills/` |
-
-一覧は `gh skill install --help`。`--agent grok` が無い古い gh は `--dir` で直接指定:
+### 自分用に全部入れる
 
 ```bash
-gh skill install cympfh/skills --all --dir ~/.grok/skills
+cd ~/git && git clone git@github.com:cympfh/skills.git && cd ~/git/skills/
+make install
 ```
 
-対話なしでリポジトリ内スキルを列挙:
-
-```bash
-gh skill install cympfh/skills
-```
-
-バージョン指定（タグ / SHA）:
-
-```bash
-gh skill install cympfh/skills check@v1.2.0
-gh skill install cympfh/skills check --pin abc123def
-```
-
-既存を上書きするときは `-f` / `--force`。
-
-インストール前に中身を見る:
-
-```bash
-gh skill preview cympfh/skills check
-```
-
-更新:
-
-```bash
-gh skill update --all
-```
-
-ローカルの作業ツリーから入れる（`make install` と同じ。コピー）:
-
-```bash
-gh skill install ~/git/skills --all --from-local --agent claude-code --scope user
-```
-
-エイリアス: `gh skills`、`gh skill add`。詳細は [gh skill](https://cli.github.com/manual/gh_skill) / [gh skill install](https://cli.github.com/manual/gh_skill_install)。
+- 使ってるハーネス全部対象
+    - `~/.agents/skills/`
+    - `~/.claude/skills/`
+    - `~/.codex/skills/`
+    - `~/.grok/skills/`
+- 追加で
+    - [anthropics/skills](https://github.com/anthropics/skills)
 
 ## スキル
 
