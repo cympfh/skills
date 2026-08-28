@@ -9,6 +9,7 @@ install:
 	for dest in $(DESTS); do \
 		gh skill install $(CURDIR) --all --from-local --dir $$dest -f; \
 		gh skill install anthropics/skills frontend-design --dir $$dest -f; \
+		gh skill install herdrdev/herdr herdr --dir $$dest -f; \
 	done
 
 ## install前に、各エージェントへ反映される差分(SKILL.mdのfrontmatter/本文)を確認する

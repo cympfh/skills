@@ -34,6 +34,7 @@ make install
     - `~/.grok/skills/`
 - 追加で
     - [anthropics/skills](https://github.com/anthropics/skills)
+    - [herdrdev/herdr](https://github.com/herdrdev/herdr) の `herdr` skill
 
 ## スキル
 
