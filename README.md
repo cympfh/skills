@@ -42,6 +42,7 @@ make install
 | --- | --- |
 | [arxiv-memo](skills/arxiv-memo/SKILL.md) | 論文の補助教材を Markdown で作る |
 | [bump](skills/bump/SKILL.md) | プロジェクトのバージョンを上げる |
+| [calendar](skills/calendar/SKILL.md) | `~/Dropbox/cal/` の予定。追記のみ、削除禁止 |
 | [check](skills/check/SKILL.md) | コードの確認・報告。実装しない |
 | [git](skills/git/SKILL.md) | git commit |
 | [grill-me](skills/grill-me/SKILL.md) | 設計・意思決定を徹底的に質問する |
