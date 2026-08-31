@@ -47,6 +47,6 @@ auto-commit mode / auto-commit-push mode を解除し、通常の動作に戻す
 ### モード中の注意
 
 - auto-commit mode / auto-commit-push mode 中は、commit（および push）を実行した直後、応答の最後に
-  `*auto-commit mode` または `*auto-commit-push mode` と一言添える。
+  `**auto-commit mode**` または `**auto-commit-push mode**` と一言添える。
   モードに入っていることを自分自身が忘れないようにするため。
-- `/git auto off` を実行したときも、応答の最後に `*auto-commit mode: off` と一言添える。
+- `/git auto off` を実行したときも、応答の最後に `**auto-commit off**` と一言添える。
