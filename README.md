@@ -49,6 +49,7 @@ make install
 | [iot](skills/iot/SKILL.md) | 自宅家電・温湿度・照明を操作する |
 | [issue](skills/issue/SKILL.md) | 人間への相談を `ISSUE.md` に書き出す |
 | [notify](skills/notify/SKILL.md) | 作業完了時にデスクトップ通知 |
+| [pickup](skills/pickup/SKILL.md) | Issues から1件選んで実装し PR を出す（`/pickup`） |
 | [private](skills/private/SKILL.md) | プライベートメモの記録・検索 |
 | [report](skills/report/SKILL.md) | 作業レポート |
 | [skill-creator](skills/skill-creator/SKILL.md) | スキルの作成・改善 |
