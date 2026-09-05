@@ -3,7 +3,6 @@ name: pickup
 description: |
   明示の /pickup のときだけ使う。GitHub Issues からタスクを1件選び、最小実装して PR を出す。
   「/pickup」「issue から PR」「次の issue を拾って」と明示されたとき。
-  description での自動発火は想定しない。
 ---
 
 # pickup
