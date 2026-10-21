@@ -56,3 +56,5 @@ make install
 | [report](skills/report/SKILL.md) | 作業レポート |
 | [skill-creator](skills/skill-creator/SKILL.md) | スキルの作成・改善 |
 | [todo](skills/todo/SKILL.md) | `TODO.md` の管理 |
+
+nihongo の出典は [yomiyasu](https://github.com/nanaism/yomiyasu)（Copyright (c) 2026 nanaism, [MIT License](https://github.com/nanaism/yomiyasu/blob/main/LICENSE)）と [cognitive-rhythm-writing](https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432)（k16shikano。ライセンスの明示はない。表現は写さず、考え方だけを採用）。原文は転載していない。

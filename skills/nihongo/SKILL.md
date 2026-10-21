@@ -182,10 +182,3 @@ description: |
 5. 読み物なら、節末の「次は〜」と、このスキルの用語の漏出を消す。同じ調子の段落が四つ以上続いていないか。
 
 直すときは、問題の箇所だけを直す。すでに追える文は残す。
-
-## 出典
-
-考え方は次の二つから取り、このスキル向けに短く書き直した。どちらの原文も転載していない。
-
-- [yomiyasu](https://github.com/nanaism/yomiyasu)（Copyright (c) 2026 nanaism, [MIT License](https://github.com/nanaism/yomiyasu/blob/main/LICENSE)）。意味と確度を保つこと、主語と述語、比喩動詞、予告文、コピー調、大げさな名詞、文末の立場。
-- [cognitive-rhythm-writing](https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432)（k16shikano。ライセンスの明示はないため、表現は写さず、考え方だけを採用）。読み物での認知の切り替え、文書自身を話題にする文を除くこと、必要な文脈を削らないこと。
