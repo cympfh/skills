@@ -58,3 +58,5 @@ make install
 | [todo](skills/todo/SKILL.md) | `TODO.md` の管理 |
 
 nihongo の出典は [yomiyasu](https://github.com/nanaism/yomiyasu)（Copyright (c) 2026 nanaism, [MIT License](https://github.com/nanaism/yomiyasu/blob/main/LICENSE)）と [cognitive-rhythm-writing](https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432)（k16shikano。ライセンスの明示はない。表現は写さず、考え方だけを採用）。原文は転載していない。
+
+adhd の出典は [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)（Copyright (c) 2026 Ayoub Ghriss, [MIT License](https://github.com/ayghri/i-have-adhd/blob/main/LICENSE)）。着想は J. Russell Ramsay と Anthony L. Rostain『The Adult ADHD Tool Kit』。原文は転載していない。

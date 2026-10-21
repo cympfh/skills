@@ -212,11 +212,3 @@ auth.spec.ts:42 が失敗。期待 200、実際 401。原因は Authorization �
 所要: 約10分。
 次: 上の関数を 42行目に貼る。
 ```
-
-## 出典
-
-[ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) の `skills/i-have-adhd/SKILL.md` を、日本語の返答向けに再構成した。
-
-Copyright (c) 2026 Ayoub Ghriss。原作は [MIT License](https://github.com/ayghri/i-have-adhd/blob/main/LICENSE)。この著作権表示と MIT の許諾条件は、コピーと派生物に残す。原作は無保証で提供される。
-
-着想は J. Russell Ramsay と Anthony L. Rostain『The Adult ADHD Tool Kit』。人間の一日の組み立てではなく、LLM の返答の形に使っている。
