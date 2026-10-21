@@ -40,6 +40,7 @@ make install
 
 | name | 内容 |
 | --- | --- |
+| [adhd](skills/adhd/SKILL.md) | 次の行動から番号付きで答える（ADHD向け） |
 | [arxiv-memo](skills/arxiv-memo/SKILL.md) | 論文の補助教材を Markdown で作る |
 | [bump](skills/bump/SKILL.md) | プロジェクトのバージョンを上げる |
 | [calendar](skills/calendar/SKILL.md) | `~/Dropbox/cal/` の予定。追記のみ、削除禁止 |
