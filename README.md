@@ -49,6 +49,7 @@ make install
 | [grill-me](skills/grill-me/SKILL.md) | 設計・意思決定を徹底的に質問する |
 | [iot](skills/iot/SKILL.md) | 自宅家電・温湿度・照明を操作する |
 | [issue](skills/issue/SKILL.md) | 人間への相談を `ISSUE.md` に書き出す |
+| [nihongo](skills/nihongo/SKILL.md) | 日本語を読みやすく書く |
 | [notify](skills/notify/SKILL.md) | 作業完了時にデスクトップ通知 |
 | [pickup](skills/pickup/SKILL.md) | Issues から1件選んで実装し PR を出す（`/pickup`） |
 | [private](skills/private/SKILL.md) | プライベートメモの記録・検索 |
