@@ -2,7 +2,7 @@ SHELL := /bin/bash
 
 .PHONY: install diff help
 
-DESTS = $(HOME)/.claude/skills $(HOME)/.agents/skills $(HOME)/.codex/skills $(HOME)/.grok/skills
+DESTS = $(HOME)/.claude/skills $(HOME)/.agents/skills $(HOME)/.codex/skills $(HOME)/.grok/skills $(HOME)/.kimi/skills
 
 ## gh skill install で各エージェントへ入れる
 install:
